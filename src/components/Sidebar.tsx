@@ -7,12 +7,14 @@ export function Sidebar() {
         Cronograma das aulas
       </span>
 
+      <div className="flex flex-col gap-8">
       <Lesson />
       <Lesson />
       <Lesson />
       <Lesson />
       <Lesson />
       <Lesson />
+      </div>
     </aside>
   )
 }
