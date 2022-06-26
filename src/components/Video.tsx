@@ -1,10 +1,17 @@
+import { DefaultUi, Player, Youtube } from "@vime/react";
 import { DiscordLogo, Lightning } from "phosphor-react";
 import { Footer } from "./Footer";
+
+import '@vime/core/themes/default.css';
 
 export function Video() {
   return (
     <div className="flex-1 p-6 flex flex-col gap-8 items-center">
-      <div className="flex max-w-[1110px] max-h-[60vh] gap-[60px] h-full w-full aspect-video bg-red-500">
+      <div className="max-w-[1110px] max-h-[60rem] gap-[60px] h-full w-full aspect-video">
+        <Player>
+          <Youtube videoId="KJj70dBgRPo" />
+          <DefaultUi />
+        </Player>
       </div>
       <div className="flex max-w-[1110px] gap-[60px]">
         <div className="flex-1 flex flex-col gap-4">
