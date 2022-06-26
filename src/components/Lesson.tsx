@@ -23,12 +23,12 @@ export function Lesson(props: LessonProps) {
   }
 
   return (
-    <div className="flex flex-col gap-2">
+    <a className="flex flex-col gap-2 group" href={'/event/lesson/' + props.slug}>
       <span className="text-gray-300">
         { captalizeFirstLetter(availableDateFormatted) }
       </span>
 
-      <div className="p-4 rounded border border-gray-600 flex flex-col gap-4">
+      <div className="p-4 rounded border border-gray-600 flex flex-col gap-4 group-hover:border-green-500">
         <header className="text-sm font-medium flex h-6">
           { isLessonAvailable ? (
             <span className="flex flex-1 text-blue-500 items-center">
@@ -50,6 +50,6 @@ export function Lesson(props: LessonProps) {
           { props.title }
         </strong>
       </div>
-    </div>
+    </a>
   )
 }
