@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { format, isPast } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { CheckCircle, Lock } from 'phosphor-react'
@@ -23,7 +24,7 @@ export function Lesson(props: LessonProps) {
   }
 
   return (
-    <a className="flex flex-col gap-2 group" href={'/event/lesson/' + props.slug}>
+    <Link className="flex flex-col gap-2 group" to={`/event/lesson/${props.slug}`}>
       <span className="text-gray-300">
         { captalizeFirstLetter(availableDateFormatted) }
       </span>
@@ -50,6 +51,6 @@ export function Lesson(props: LessonProps) {
           { props.title }
         </strong>
       </div>
-    </a>
+    </Link>
   )
 }
